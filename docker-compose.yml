@@ -1,0 +1,10 @@
+version: '3'
+services:
+  mail:
+    image: bytemark/smtp
+    restart: always
+    env_file:
+      - ./credentials.env
+        
+    ports:
+      - "8281:25"
