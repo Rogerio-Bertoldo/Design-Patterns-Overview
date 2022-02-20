@@ -12,10 +12,10 @@ if __name__ == '__main__':
     job_notifier = JobNotifier()
     
     dev = Candidate(name="Rogerio", job="Software developer", email="pogeyef279@reimondo.com")
-    po = Candidate(name="Bob", job="Manager", email="jafyadulmi@vusra.com")
+    manager = Candidate(name="Bob", job="Manager", email="jafyadulmi@vusra.com")
 
     dev.setAlert(job_notifier, Event(dev.job))
-    po.setAlert(job_notifier, Event(po.job))
+    manager.setAlert(job_notifier, Event(manager.job))
 
     job_notifier.addNewJob("Software developer")
     job_notifier.addNewJob("Manager")
